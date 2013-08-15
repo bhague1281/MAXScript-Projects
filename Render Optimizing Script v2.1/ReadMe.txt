@@ -19,12 +19,42 @@ They include...
 	particular needs. Google or check the 3DS MAX Help file for information
 	on how to make a preset.
 
-Since this script was written with the intent of being an in-house product, 
-many of the settings in the first two files may need to be changed to suit
-your project. The settings you may be interested in changing are listed below.
+There is also a settings file titled settings.ini, where you can add values
+that ROS will automatically load during startup. File creation capabilities
+have not been added as of now (slated for 2.3 or later). Until then, you can
+open the settings.ini file and change settings by hand. The file is set up
+in the following simple format:
 
-fn frameSettings
-	-background color
-	-frame width/height
-	-skipping existing images during render
-	-loading a mental ray preset
+<Setting name>
+<Setting value>
+
+<Setting name>
+<Setting value>
+
+...<repeat>...
+
+Also, you can currently change the following:
+mentalRayPreset
+backgroundColor
+frameWidth
+frameHeight
+saveState
+renderHiddenObjects
+force2Sided
+skipRenderedFrames
+timeType
+netRender
+
+
+How to Add a Button in 3ds Max (using 3ds Max 2011)
+-------------------------------
+1. Go to C:\Program Files\Autodesk\3ds Max 2011\Scripts\Startup
+2. Copy Render Optimizing Script Button and settings.ini (if available) to this folder.
+3. Open 3ds Max.
+4. Go to Customize -> Customize User Interface
+5. Select the Toolbars tab.
+6. Via the Category drop-down box, select Scripts
+7. ROS should appear in the window.
+8. Drag the icon/text for ROS and drop it into the top toolbar
+   (or whatever toolbar is convenient).
+9. You're done! Now go render some stuff!

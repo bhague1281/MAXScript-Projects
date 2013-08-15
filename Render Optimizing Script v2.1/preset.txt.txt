@@ -1,0 +1,12 @@
+# This file contains various presets for Render Optimizing Script.
+
+#mental ray/other renderer preset
+
+#background color
+#frame width
+#frame height
+
+#skip rendered frames
+
+#optimize settings
+#
